@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jeu number</title>
+</head>
+
+<body>
+  <input type="number" name="" value="" class="counter1">
+  <button type="button" name="button" id="result" ></button>
+  <p id="demo"></p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+        var min = 0;
+      var max = 100;
+      var random = Math.floor(Math.random() * (+max - +min)) + +min;
+      console.log(random);
+    $('#result').click(function() {
+      var counter1 = document.querySelector('.counter1').value;
+      if (counter1 > random) {
+        alert('Moins');
+      } else if (counter1 < random) {
+        alert('Plus');
+      } else {
+        alert('Correcte !!!');
+      }
+    });
+  </script>
+</body>
+
+</html>
